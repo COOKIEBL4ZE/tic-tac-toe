@@ -1,0 +1,76 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: gray;
+}
+main {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 18px;
+}
+#challenge {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: small;
+}
+#game-title {
+  margin-top: -10px;
+  text-transform: capitalize;
+  font-family: Arial, sans-serif;
+}
+#score-board {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+  justify-content: space-around;
+}
+.board {
+  border: 5px solid lime;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.board-value {
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: xx-large;
+}
+#instruction {
+  font-weight: bold;
+  color: gray;
+}
+#box {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.mark-button {
+  height: 130px;
+  width: 100%;
+  border-radius: 10px;
+}
+#next-round {
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding: 15px;
+}
+#delete {
+  font-weight: bold;
+
+  padding: 14px;
+}
