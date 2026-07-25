@@ -57,6 +57,7 @@ main {
   gap: 5px;
 }
 .mark-button {
+font-size: 50px;
   height: 130px;
   width: 100%;
   border-radius: 10px;
