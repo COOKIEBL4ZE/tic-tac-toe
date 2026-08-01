@@ -61,7 +61,30 @@ font-size: 50px;
   height: 130px;
   width: 100%;
   border-radius: 10px;
+  border-width: 5px;
 }
+
+.mark-button:hover:not(:disabled){
+  border-color: chartreuse;
+  background-color: gold;
+  transform: translate(-5px);
+}
+.mark-button.oldest {
+  border-style: dashed;
+}
+
+.mark-button.o {
+color: red;
+}
+
+.mark-button.x {
+  color: blue;
+}
+
+.mark-button.win{
+  background-color: gold;border-color: chartreuse;
+}
+
 #next-round {
   background-color: cadetblue;
   color: white;
