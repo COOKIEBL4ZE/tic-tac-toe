@@ -1,9 +1,9 @@
 const markbuttons = document.querySelectorAll(".mark-button");
 const newroundbutton = document.querySelector("#next-round");
 const resetScorebutton = document.querySelector("#delete");
-const scoreX = document.querySelector("#scoreX")
+const score1 = document.querySelector("#score1")
 const rounds =document.querySelector("#rounds")
-const scoreO = document.querySelector("#scoreO")
+const score2 = document.querySelector("#score2")
 const instruction = document.querySelector("#instruction")
 const winningLines = [
   [0, 1, 2],
@@ -20,15 +20,15 @@ let gameover = false;
 
 let board = ["", "", "", "", "", "", "", "", ""];
 let piecehistory = {
-  X: [],
-  O: [],
+  1: [],
+  2: [],
 };
 let scoreboard = {
-  X:0,
-  O:0,
+  1:0,
+  2:0,
   rounds:0
 }
-let currentplayer = "X";
+let currentplayer = "1";
 function handlecellclick(event) {
   const markbutton = event.target;
   const positon = Number(markbutton.dataset.cell);
@@ -59,10 +59,10 @@ function recreateboard() {
 }
 
 function switchplayer() {
-  if (currentplayer === "X") {
-    currentplayer = "O";
+  if (currentplayer === "1") {
+    currentplayer = "2";
   } else {
-    currentplayer = "X";
+    currentplayer = "1";
   }
 
 function markoldestpiece() {
@@ -132,15 +132,15 @@ function findwinningline() {
   return null;
 }
 function updatescoreboard() {
-scoreO.textContent = scoreboard.O
-scoreX.textContent = scoreboard.X
+score2.textContent = scoreboard[2]
+score1.textContent = scoreboard[1]
 rounds.textContent = scoreboard.rounds
 }
 
 function handleResetClick(event) {
   scoreboard = {
-  X:0,
-  O:0,
+  1:0,
+  2:0,
   rounds:0
 }
 updatescoreboard()
@@ -149,15 +149,15 @@ startnewround()
 
 function startnewround() {
   board =["", "", "", "", "", "", "", "", ""];
-  currentplayer= 'X'
+  currentplayer= '1'
 piecehistory = {
-  X: [],
-  O: [],
+  1: [],
+  2: [],
  } 
  markbuttons.forEach((markbutton) => {
     markbutton.textContent = "";
     markbutton.disabled = false
-    markbutton.classList.remove("x","o","oldest","win")
+    markbutton.classList.remove("1","2","oldest","win")
   });
 }
 markbuttons.forEach((markbutton) => {

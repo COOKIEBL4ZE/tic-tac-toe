@@ -65,24 +65,26 @@ font-size: 50px;
 }
 
 .mark-button:hover:not(:disabled){
-  border-color: chartreuse;
-  background-color: gold;
-  transform: translate(-5px);
+  border-color: red;
+  background-color:black;
+  color: blueviolet;
+transform : translate(-5px);
 }
 .mark-button.oldest {
   border-style: dashed;
+  border-color: aqua;
 }
 
-.mark-button.o {
-color: red;
+.mark-button.c {
+color: gold (242, 255, 0);
 }
 
-.mark-button.x {
-  color: blue;
+.mark-button.b {
+  color: cyan (0, 179, 255);
 }
 
 .mark-button.win{
-  background-color: gold;border-color: chartreuse;
+  background-color:#f6ff00;border-color: red;
 }
 
 #next-round {
