@@ -5,6 +5,10 @@ const score1 = document.querySelector("#score1")
 const rounds =document.querySelector("#rounds")
 const score2 = document.querySelector("#score2")
 const instruction = document.querySelector("#instruction")
+const s1 = document.querySelector("#sound1")
+const s2 = document.querySelector("#sound2")
+const win = document.querySelector("#win")
+
 const winningLines = [
   [0, 1, 2],
   [3, 4, 5],
@@ -37,6 +41,11 @@ function handlecellclick(event) {
 }
 
 function makeamove(positon) {
+  if (currentplayer === "1") {
+s1.play()
+  }else {
+    s2.play()
+  }
   if (piecehistory[currentplayer].length ===3){
     const oldespieceposition = piecehistory[currentplayer].shift()
     board[oldespieceposition] = "" 
@@ -46,6 +55,7 @@ function makeamove(positon) {
   piecehistory[currentplayer].push(positon);
   recreateboard();
   checkGameResults();
+  
 }
 
 function recreateboard() {
@@ -103,6 +113,7 @@ finishround(`${currentplayer} wins this round!`, winningLine)
 }
 
 function finishround(message, winningLine = []){
+ win.play()
   gameover = true
 
   instruction.textContent = message
